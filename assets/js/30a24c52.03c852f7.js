@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrobin_note_book=self.webpackChunkrobin_note_book||[]).push([[453],{8605:o=>{o.exports=JSON.parse('{"label":"hello","permalink":"/blog/tags/hello","allTagsPath":"/blog/tags","count":2}')}}]);
