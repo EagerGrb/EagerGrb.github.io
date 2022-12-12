@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eagergrb.github.io/blog</id>
-    <title>Welcome to robinWorld 梅梅子 Blog</title>
+    <title>robin-web-notebook Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eagergrb.github.io/blog"/>
-    <subtitle>Welcome to robinWorld 梅梅子 Blog</subtitle>
+    <subtitle>robin-web-notebook Blog</subtitle>
     <icon>https://eagergrb.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
