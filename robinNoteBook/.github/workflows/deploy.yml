@@ -11,37 +11,24 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./robinNoteBook  # 所有run命令在此目录执行
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: "20"
-          cache: "npm"
-          cache-dependency-path: "robinNoteBook/package-lock.json"  # 相对仓库根目录
+          node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build Docusaurus
         run: npm run build
-        # 移除无用的GIT_USER环境变量
-
-      # 验证构建输出（调试用）
-      - name: List build directory
-        run: ls -lh build
-        working-directory: ./robinNoteBook
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3.9.3
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./robinNoteBook/build  # 相对于仓库根目录
-          publish_branch: gh-pages
-          commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
+          publish_dir: ./build
