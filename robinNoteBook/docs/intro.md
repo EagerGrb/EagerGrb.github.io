@@ -1,47 +1,8 @@
 ---
 sidebar_position: 1
 ---
+# 简介
 
-# Tutorial Intro
-
-Let's discover **Docusaurus in less than 5 minutes**.
-
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+序：分享王阳明心学著名一词，'知行合一'。他认为知行是一回事，不是割裂的。知必然要表现为行，不行不能算真知。我时常在思考，怎么样才能高效的学习。近期，我似乎思考出了答案。  
+在计算机浩瀚的知识体系下，没有高效的学习方法论，是很容易迷茫，陷入焦虑的死循环的。此处描述下我思考的答案：在算法导论中，算法程序的特性有两个是：有输入，有输出。那么既然我们想提高学习效率，为何不反着来？利用输出，倒逼输入。毕竟，肚子里没有墨水，谈何输出？  
+于是，这个blog用于记录日常学习的点点滴滴。希望能够提升自我成就感，避免在大量学习中迷失了自我。当然，这一切都是动态规划的。如果此方案行不通，将会尝试其他方法。
