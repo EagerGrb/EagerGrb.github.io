@@ -3,34 +3,39 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 确保分支名匹配你的默认分支
+      - main
+
+# 关键权限设置
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
-          cache-dependency-path: "robinNoteBook/package-lock.json"  # 指向子目录的 lock 文件
+          node-version: 20
+          cache: npm
+          cache-dependency-path: robinNoteBook/package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ./robinNoteBook  # 在子目录运行
-
-      - name: Build Docusaurus
-        run: npm run build
+      - name: Install and Build
         working-directory: ./robinNoteBook
+        run: |
+          npm ci
+          npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./robinNoteBook/build  # 从根目录指向子目录的 build
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 确保 permissions 已设置
+          publish_dir: ./robinNoteBook/build
           publish_branch: gh-pages
           commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
+          force_orphan: true  # 保持分支干净
