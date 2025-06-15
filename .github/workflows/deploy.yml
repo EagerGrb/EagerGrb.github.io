@@ -2,22 +2,17 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
-# 关键权限设置
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
+      - uses: actions/checkout@v4
+      
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -31,11 +26,14 @@ jobs:
           npm ci
           npm run build
 
+      - name: Verify Build Output
+        run: ls -lh build
+        working-directory: ./robinNoteBook
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # 确保 permissions 已设置
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./robinNoteBook/build
           publish_branch: gh-pages
-          commit_message: "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          force_orphan: true  # 保持分支干净
+          force_orphan: true
