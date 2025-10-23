@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrobin_note_book=self.webpackChunkrobin_note_book||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/en/blog","blogTitle":"Blog","authorsListPath":"/en/blog/authors"}')}}]);
