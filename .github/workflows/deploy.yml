@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to Docs GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ROBINOS_REPO_TOKEN }} 
           publish_dir: ./robinNoteBook/build
           publish_branch: gh-pages
 
