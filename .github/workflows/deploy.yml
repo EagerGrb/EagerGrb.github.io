@@ -4,9 +4,6 @@ on:
   push:
     branches: [main]
 
-permissions:
-  contents: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -18,7 +15,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          # 修正路径：根据你的项目结构确定
           cache-dependency-path: robinNoteBook/package-lock.json
 
       - name: Install and Build
@@ -27,27 +23,33 @@ jobs:
           npm ci
           npm run build
 
-      # 1. 部署到文档项目自己的 GitHub Pages (可选)
+      # === 关键调试步骤：确认文件真的在这里 ===
+      - name: Verify Build Output Location
+        run: |
+          echo "Checking current directory:"
+          pwd
+          echo "Checking robinNoteBook/build content:"
+          ls -R robinNoteBook/build
+
+      # 1. 部署到 Docs 自己仓库的 gh-pages
       - name: Deploy to Docs GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用自带的即可
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./robinNoteBook/build
           publish_branch: gh-pages
 
-      # 2. 关键：直接将产物推送到 RobinOS 仓库
+      # 2. 关键：修正路径，同步到 RobinOS
       - name: Pushes to RobinOS
         uses: cpina/github-action-push-to-another-repository@main
         env:
-          # 这里的 Secret 必须在【文档项目】的 Settings 里配置
           API_TOKEN_GITHUB: ${{ secrets.ROBINOS_REPO_TOKEN }}
         with:
-          # 源目录：文档构建出来的文件夹
-          source-directory: 'robinNoteBook/build'
+          # 必须确保这个路径和上面 ls 出来的路径一致
+          source-directory: 'robinNoteBook/build' 
           destination-github-username: 'EagerGrb'
           destination-repository-name: 'RobinOS'
-          # 目标目录：RobinOS 里的存放位置
           target-directory: 'public/docs'
           user-email: 'action@github.com'
           target-branch: main
-          commit-message: "docs: update from documentation project"
+          commit-message: "docs: update from documentation project (automated)"
