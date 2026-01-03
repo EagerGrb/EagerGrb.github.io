@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrobin_note_book=self.webpackChunkrobin_note_book||[]).push([[7327],{9610:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/docs/en/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

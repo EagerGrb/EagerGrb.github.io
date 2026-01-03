@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>mil mil妙妙屋 Blog</title>
-        <link>https://eagergrb.github.io/docs/en/blog</link>
+        <link>http://localhost:3000/docs/en/blog/</link>
         <description>mil mil妙妙屋 Blog</description>
         <lastBuildDate>Sun, 15 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,12 +10,12 @@
         <language>en</language>
         <item>
             <title><![CDATA[大家好，我是练习时长三年半的前端开发，主攻图形学方向。]]></title>
-            <link>https://eagergrb.github.io/docs/en/blog/2025/6/15/intro</link>
-            <guid>https://eagergrb.github.io/docs/en/blog/2025/6/15/intro</guid>
+            <link>http://localhost:3000/docs/en/blog/2025/6/15/intro/</link>
+            <guid>http://localhost:3000/docs/en/blog/2025/6/15/intro/</guid>
             <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[下面是我的个人简历：]]></description>
             <content:encoded><![CDATA[<p>下面是我的个人简历：</p>
-<embed src="/pdf/grb.pdf" type="application/pdf" width="100%" height="600px">]]></content:encoded>
+<embed src="/docs/pdf/grb.pdf" type="application/pdf" width="100%" height="600px">]]></content:encoded>
         </item>
     </channel>
 </rss>
