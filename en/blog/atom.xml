@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://eagergrb.github.io/en/blog</id>
+    <id>https://eagergrb.github.io/docs/en/blog</id>
     <title>mil mil妙妙屋 Blog</title>
     <updated>2025-06-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://eagergrb.github.io/en/blog"/>
+    <link rel="alternate" href="https://eagergrb.github.io/docs/en/blog"/>
     <subtitle>mil mil妙妙屋 Blog</subtitle>
-    <icon>https://eagergrb.github.io/en/img/favicon.ico</icon>
+    <icon>https://eagergrb.github.io/docs/en/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[大家好，我是练习时长三年半的前端开发，主攻图形学方向。]]></title>
-        <id>https://eagergrb.github.io/en/blog/2025/6/15/intro</id>
-        <link href="https://eagergrb.github.io/en/blog/2025/6/15/intro"/>
+        <id>https://eagergrb.github.io/docs/en/blog/2025/6/15/intro</id>
+        <link href="https://eagergrb.github.io/docs/en/blog/2025/6/15/intro"/>
         <updated>2025-06-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[下面是我的个人简历：]]></summary>
         <content type="html"><![CDATA[<p>下面是我的个人简历：</p>
