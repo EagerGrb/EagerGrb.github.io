@@ -30,7 +30,7 @@ function HomepageHeader() {
           <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg mr-4"
-              to="/intro">
+              to="/main/intro">
               🚀 探索弹药库
             </Link>
             <Link
